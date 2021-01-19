@@ -23,6 +23,8 @@ public class DubboConfiguration {
         registryConfig.setAddress("zookeeper://localhost:12181");
         // dubbo支持zkclient和curator两个客户端，zkclient就类似mybatis，curator类似hibernate
         registryConfig.setClient("zkclient");
+        // 向该注册中心注册服务，默认注册
+        registryConfig.setRegister(true);
         return registryConfig;
     }
 
@@ -32,6 +34,8 @@ public class DubboConfiguration {
         registryConfig.setAddress("zookeeper://localhost:22181");
         // dubbo支持zkclient和curator两个客户端，zkclient就类似mybatis，curator类似hibernate
         registryConfig.setClient("zkclient");
+        // 向该注册中心注册服务
+        registryConfig.setRegister(true);
         return registryConfig;
     }
 
